@@ -35,12 +35,12 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: '列表1', id: 1 },
+    { title: '列表2', id: 2 },
+    { title: '列表3', id: 3 },
+    { title: '列表4', id: 4 },
+    { title: '列表5', id: 5 },
+    { title: '列表6', id: 6 }
   ];
 })
 
