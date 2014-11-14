@@ -1,1 +1,24 @@
 /* Empty. Add your own CSS if you like */
+/* 页面头 */
+.bar.bar-stable{
+	background-color: #394e6b;
+}
+/* 页面面板 */
+.pane, .view {
+	background-color: #394e6b;
+}
+/* 页面头文字 */
+.bar.bar-stable .title{
+	color:#fff;
+}
+/* 页面头标志 */
+.bar-stable .button,.bar-stable .button.button-clear{
+	color:#fff;
+}
+.bar-stable .button:hover {
+	color:#fff;
+}
+/* 左侧菜单面板 */
+.menu{
+	background-color: #394e6b;
+}
