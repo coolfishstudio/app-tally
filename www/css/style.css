@@ -18,7 +18,21 @@
 .bar-stable .button:hover {
 	color:#fff;
 }
+/* 头部 */
+.bar-header{
+	border-bottom-width : 0px;
+}
 /* 左侧菜单面板 */
 .menu{
 	background-color: #394e6b;
+}
+
+.welcome-box {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%; 
+}
+
+.welcome-box .slider-pager{
+  display: none; 
 }
