@@ -29,6 +29,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       templateUrl: "templates/menu.html",
       controller: 'AppCtrl'
     })
+    //首页
+    .state('app.index', {
+      url: "/index",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/index.html"
+        }
+      }
+    })
+    //引导页
     .state('app.welcome', {
       url: "/welcome",
       views: {
@@ -78,6 +88,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     });
   // if none of the above states are matched, use this as the fallback
   /*首页*/
-  $urlRouterProvider.otherwise('/app/welcome');
+  $urlRouterProvider.otherwise('/app/index');
 });
 

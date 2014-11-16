@@ -1,12 +1,28 @@
-<ion-view hide-nav-bar="true" id="welcome">
-    <ion-slide-box class="welcome-box" on-slide-changed="slideHasChanged($index)">
-		<ion-slide>
-			<div class="box blue">首页</div>
-		</ion-slide>
-	</ion-slide-box>
-	<div style="width: 100%; text-align: center; color: #FFF; position: absolute; bottom: 10px;">
-		<ion-item nav-clear menu-close ng-click="login()">
-          登陆
-        </ion-item>
-		V1.0</div>
-</icon-view>
+<div class="modal">
+	<ion-view hide-nav-bar="true" id="welcome">
+	    <ion-slide-box class="welcome-box" on-slide-changed="slideHasChanged($index)">
+			<ion-slide>
+				<div class="box blue">引导页1</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="box blue">引导页2</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="box blue">引导页3</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="box blue">引导页4</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="box blue">引导页5</div>
+				<div style="width: 100%; text-align: center; color: #FFF; position: absolute; bottom: 10px;">
+					<ion-item nav-clear menu-close >
+			          开始使用
+			        </ion-item>
+			    </div>
+			</ion-slide>
+		</ion-slide-box>
+		
+	</icon-view>
+</div>
+
