@@ -23,15 +23,15 @@ angular.module('starter.controllers', [])
   };
 
 //-- 登陆到引导页
-   $ionicModal.fromTemplateUrl('templates/welcome.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.welcome = modal;
-  });
-  // Open the login modal
-  $scope.welcome = function() {
-    $scope.welcome.show();
-  };
+  //  $ionicModal.fromTemplateUrl('templates/welcome.html', {
+  //   scope: $scope
+  // }).then(function(modal) {
+  //   $scope.welcome = modal;
+  // });
+  // // Open the login modal
+  // $scope.welcome = function() {
+  //   $scope.welcome.show();
+  // };
 
 
 
