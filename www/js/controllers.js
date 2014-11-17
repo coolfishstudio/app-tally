@@ -4,6 +4,7 @@ angular.module('starter.controllers', [])
   // Form data for the login modal
   $scope.loginData = {};
 
+//-- 首页到登陆
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
@@ -20,6 +21,20 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     $scope.modal.show();
   };
+
+//-- 登陆到引导页
+   $ionicModal.fromTemplateUrl('templates/welcome.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.welcome = modal;
+  });
+  // Open the login modal
+  $scope.welcome = function() {
+    $scope.welcome.show();
+  };
+
+
+
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
