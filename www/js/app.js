@@ -29,7 +29,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       templateUrl: "templates/menu.html",
       controller: 'AppCtrl'
     })
-    //首页
+    //登陆
     .state('app.index', {
       url: "/index",
       views: {
@@ -47,7 +47,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    
+    //首页
+    .state('app.main', {
+      url: "/main",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/main.html"
+        }
+      }
+    })
 
 
     .state('app.search', {
@@ -73,6 +81,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         'menuContent' :{
           templateUrl: "templates/playlists.html",
           controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+    .state('app.setting', {
+      url: "/setting",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/setting.html"
         }
       }
     })

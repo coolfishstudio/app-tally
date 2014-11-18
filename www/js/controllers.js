@@ -1,55 +1,47 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', ["$scope", "$ionicModal", "$timeout", "$location",
+  function($scope, $ionicModal, $timeout, $location) {
   // Form data for the login modal
   $scope.loginData = {};
 
 //-- 首页到登陆
-  // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
   }).then(function(modal) {
-    $scope.modal = modal;
+    $scope.loginModal = modal;
   });
 
-  // Triggered in the login modal to close it
   $scope.closeLogin = function() {
-    $scope.modal.hide();
+    $scope.loginModal.hide();
   };
-
-  // Open the login modal
   $scope.login = function() {
-    $scope.modal.show();
+    $scope.loginModal.show();
   };
-
-//-- 登陆到引导页
-  //  $ionicModal.fromTemplateUrl('templates/welcome.html', {
-  //   scope: $scope
-  // }).then(function(modal) {
-  //   $scope.welcome = modal;
-  // });
-  // // Open the login modal
-  // $scope.welcome = function() {
-  //   $scope.welcome.show();
-  // };
-
-
-
-
-  // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
     $timeout(function() {
       $scope.closeLogin();
+      // $location.path('/app/main');
+       $location.path('/app/main');
     }, 1000);
   };
+    // //-- 登陆到引导页
+    // $ionicModal.fromTemplateUrl('templates/welcome.html', {
+    //   scope: $scope
+    // }).then(function(modal) {
+    //   $scope.welcome = modal;
+    // });
+    // // Open the login modal
+    // $scope.welcome = function() {
+      
+    // };
+
+  // Perform the login action when the user submits the login form
+}])
 
 
-  //----测试
-})
+
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
