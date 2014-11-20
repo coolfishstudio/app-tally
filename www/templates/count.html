@@ -1,4 +1,4 @@
-<div class="modal">
+<div class="count_panel modal">
 	<ion-header-bar>
 		<h1 class="title">记账</h1>
 		<div class="buttons">
@@ -7,10 +7,90 @@
 	</ion-header-bar>
 	<ion-content>
 	    <form ng-submit="doCount()">
-			<div>
-				
+			<div id="calculator">
+				<div class="row">
+					<div class="screen col">123123</div>
+				</div>
+				<div class="row">
+					<div class="btn col">7</div>
+					<div class="btn col">8</div>
+					<div class="btn col">9</div>
+					<div class="btn col">C</div>
+				</div>
+				<div class="row">
+					<div class="btn col">4</div>
+					<div class="btn col">5</div>
+					<div class="btn col">6</div>
+					<div class="btn col">+</div>
+				</div>
+				<div class="row">
+					<div class="btn col">1</div>
+					<div class="btn col">2</div>
+					<div class="btn col">3</div>
+					<div class="btn col">-</div>
+				</div>
+				<div class="row">
+					<div class="btn col">0</div>
+					<div class="btn col">.</div>
+					<div class="btn col">=</div>
+					<div class="btn col ok">OK</div>
+				</div>
 			</div>
 	    </form>
 	</ion-content>
 </div>
 
+<style type="text/css">
+.count_panel.modal{
+	background: #394e6b;
+	color: #fff;
+}
+.count_panel .bar{
+	background: #394e6b;
+	color: #fff;
+}
+.count_panel .bar h1{
+	color: #fff;
+}
+.count_panel .bar .button-clear{
+	color: #fff;
+}
+#calculator{
+
+}
+#calculator .btn{
+	cursor: pointer;
+	min-width: 67px;
+	min-height: 36px;
+	line-height: 34px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 0 3px 12px 3px;
+	color: #888;
+	text-align: center;
+	user-select: none;
+	transition: all 0.2s ease;
+}
+#calculator .screen{
+	height: 48px;
+	padding: 0 10px;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	font-size: 20px;
+	line-height: 48px;
+	margin: 0 3px 12px 3px;
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+#calculator .btn.clear{
+	background: #eee;
+}
+#calculator .btn.ok{
+	background: #3f4e6b;
+	color:#e7e7e7;
+}
+</style>
