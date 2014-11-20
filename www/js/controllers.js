@@ -55,4 +55,35 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+})
+
+
+//---主界面
+.controller('MainCtrl', ["$scope", "$ionicModal", "$timeout", "$location", 
+    function($scope, $ionicModal, $timeout, $location){
+
+    $scope.countData = {};
+    //-- 记账面板
+    $ionicModal.fromTemplateUrl('templates/count.html', {
+        scope: $scope
+    }).then(function(modal) {
+        $scope.countModal = modal;
+    });
+    //关闭面板
+    $scope.closeCount = function(){
+        $scope.countModal.hide();
+    };
+    //打开面板
+    $scope.count = function(){
+        console.log('11111');
+        $scope.countModal.show();
+    };
+    //提交处理
+    $scope.doCount = function(){
+        console.log('Doing count', $scope.countData);
+        $timeout(function(){
+            $scope.closeCount();
+        }, 1000);
+    };
+    
+}]);

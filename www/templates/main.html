@@ -9,15 +9,16 @@
     			<div class="main_money"><b>0</b></div>
     		</div>
     		<div class="fr">
-    			<div class="main_title">今日收入</div>
-    			<div class="main_money"><b>999999</b></div>
+    			<div class="main_title">今日支出</div>
+    			<div class="main_money"><b>999</b></div>
     		</div>
     	</div>
-    	<div class="main_content_box">
-    		222
+    	<div class="main_content_box row">
+			<!-- <div class="col">.col</div>
+			<div class="col">.col</div> -->
     	</div>
-    	<div class="main_btn">
-    		＋
+    	<div class="main_btn" on-tap="count()">
+    		<i class="icon ion-plus-round"></i>
     	</div>
   	</ion-content>
 </ion-view>
@@ -30,9 +31,17 @@
 	border: 4px solid #ccc;
 	color: #394e6b;
 	position: absolute;
-	top:44px;
+	top:24px;
 	left:50%;
 	margin-left: -64px;
+}
+.main_btn i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 70px;
+	margin-top: -35px;
+	margin-left: -26px;
 }
 .main_top_box{
 	width: 100%;
@@ -67,6 +76,6 @@
 	padding-right: 8px;
 }
 .main_content_box{
-
+	padding-top: 80px;
 }
 </style>
