@@ -11,6 +11,27 @@
 				<div class="row">
 					<div class="screen col">123123</div>
 				</div>
+				<div class="row type">
+					<ion-scroll zooming="true" direction="x" scrollbar-x="false" style="width: 1000px;">
+					<div class="col" style="width: 1140px;">
+						<div style="background:#669999;"><i class="icon ion-home"></i></div>
+						<div style="background:#996699;"><i class="icon ion-model-s"></i></div>
+						<div style="background:#99CCCC;"><i class="icon ion-fork"></i></div>
+						<div style="background:#CC9966;"><i class="icon ion-knife"></i></div>
+						<div style="background:#9999CC;"><i class="icon ion-pizza"></i></div>
+						<div style="background:#CC9999;"><i class="icon ion-coffee"></i></div>
+						<div style="background:#FFCC99;"><i class="icon ion-beer"></i></div>
+						<div style="background:#66CCCC;"><i class="icon ion-wineglass"></i></div>
+						<div style="background:#999999;"><i class="icon ion-icecream"></i></div>
+						<div style="background:#CC6699;"><i class="icon ion-iphone"></i></div>
+						<div style="background:#999966;"><i class="icon ion-game-controller-b"></i></div>
+						<div style="background:#FF9999;"><i class="icon ion-card"></i></div>
+						<div style="background:#99CC99;"><i class="icon ion-bag"></i></div>
+						<div style="background:#66FFFF;"><i class="icon ion-mic-c"></i></div>
+						<div style="background:#9999FF;"><i class="icon ion-plane"></i></div>
+					</div>
+					</ion-scroll>
+				</div>
 				<div class="row">
 					<div class="btn col">7</div>
 					<div class="btn col">8</div>
@@ -56,13 +77,12 @@
 	color: #fff;
 }
 #calculator{
-
 }
 #calculator .btn{
 	cursor: pointer;
 	min-width: 67px;
-	min-height: 36px;
-	line-height: 34px;
+	min-height: 42px;
+	line-height: 40px;
 	background: #fff;
 	border-radius: 3px;
 	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
@@ -70,16 +90,44 @@
 	color: #888;
 	text-align: center;
 	user-select: none;
-	transition: all 0.2s ease;
+}
+#calculator .row.type{
+	padding: 0;
+/*	border-top: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+	background: #fff;*/
+	height: 84px;
+	margin: 0 0px 22px 0px;
+}
+#calculator .row.type .col{
+	min-height: 86px;
+	line-height: 84px;
+	height: 84px;
+	color: #888;
+	text-align: center;
+	user-select: none;
+	overflow: hidden;
+}
+#calculator .row.type .col div{
+	width: 65px;
+	height: 65px;
+	line-height: 65px;
+	float: left;
+	border-radius: 50%;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 5px;
+	font-size: 30px;	
+	background: #6699CC;
+	color:#fff;
 }
 #calculator .screen{
-	height: 48px;
+	height: 60px;
 	padding: 0 10px;
 	background: rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
 	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
-	font-size: 20px;
-	line-height: 48px;
+	font-size: 30px;
+	line-height: 60px;
 	margin: 0 3px 12px 3px;
 	color: #fff;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -90,7 +138,9 @@
 	background: #eee;
 }
 #calculator .btn.ok{
-	background: #3f4e6b;
-	color:#e7e7e7;
+	background: #d4ffff;
+}
+#calculator .btn.ok:active{
+	background: #000;
 }
 </style>
